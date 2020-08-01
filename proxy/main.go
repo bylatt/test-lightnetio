@@ -30,10 +30,10 @@ func main() {
 	PORT := os.Getenv("PROXY_PORT")
 	UPSTREAM := os.Getenv("PROXY_UPSTREAM")
 	if PORT == "" {
-		log.Fatalln("PROXY_PORT env variable is not set")
+		log.Fatalln("PROXY_PORT environment variable is not set")
 	}
 	if UPSTREAM == "" {
-		log.Fatalln("PROXY_UPSTREAM env variable is not set")
+		log.Fatalln("PROXY_UPSTREAM environment variable is not set")
 	}
 	proxyURL, err := url.Parse(UPSTREAM)
 	if err != nil {
